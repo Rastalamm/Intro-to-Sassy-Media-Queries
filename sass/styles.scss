@@ -8,6 +8,7 @@ $highlight: orange;
 $padding: 20px;
 
 
+
 // Media Query Ranges
 $medium: "only screen and (min-width: 600px)";
 $large: "only screen and (min-width: 900px)";
@@ -25,6 +26,17 @@ body{
   background-color: $highlight;
   text-align: center;
   color: $light;
+
+  @media #{$medium}{
+
+  }
+
+  @media #{$large}{
+  background-color: $dark
+
+  }
+
+
 }
 
 h1, h2, h3, h4{
@@ -33,24 +45,60 @@ h1, h2, h3, h4{
 
 h1{
   padding: $padding;
+  @include block_font(55px, $dark);
+
+  @media #{$medium}{
+  color: $light;
+  }
+
+  @media #{$large}{
+    color: $highlight;
+
+  }
 }
 
 h2{
+  @include block_font(35px, $light);
 
+
+  @media #{$medium}{
+    color: $highlight;
+  }
+
+  @media #{$large}{
+    color: $dark;
+
+  }
 }
 
-ul, ol {
-  list-style-type: none;
-}
+
 
 
 .block_family{
   max-width:350px;
   margin:auto;
+
+  @media #{$medium}{
+
+  }
+
+  @media #{$large}{
+
+  }
 }
 
 .block_family li{
   background-color: $dark;
   margin-bottom: $padding;
   padding: $padding;
+  list-style-type: none;
+
+
+  @media #{$medium}{
+    background-color: $light;
+  }
+
+  @media #{$large}{
+    background-color: $highlight;
+  }
 }
