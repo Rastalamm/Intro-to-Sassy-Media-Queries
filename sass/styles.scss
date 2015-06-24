@@ -10,7 +10,8 @@ $padding: 20px;
 
 
 // Media Query Ranges
-$medium: "only screen and (min-width: 600px)";
+$medium: "only screen and (min-width: 600px) and (max-width: 899px)";
+$medium-large: "only screen and (min-width: 600px)";
 $large: "only screen and (min-width: 900px)";
 
 
@@ -49,18 +50,17 @@ h1{
   @include block_font(55px, $dark);
 
   @media #{$medium}{
-  color: $light;
+    color: $light;
   }
 
   @media #{$large}{
     color: $highlight;
-
   }
 }
 
 h2{
   @include block_font(35px, $light);
-    -webkit-margin-before: 0em;
+  -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
@@ -100,14 +100,24 @@ h2{
   list-style-type: none;
 
 
-  @media #{$medium}{
+  @media #{$medium-large}{
     background-color: $light;
     padding: 18px 81px;
     display: inline-block;
     margin-bottom: 4px;
+
+  }
+
+  @media #{$medium}{
+    &:nth-child(odd){
+    background-color: $dark;
+    }
   }
 
   @media #{$large}{
     background-color: $highlight;
+    &:nth-child(3n+2){
+    background-color: $light;
+    }
   }
 }
