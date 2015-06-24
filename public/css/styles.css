@@ -7,7 +7,8 @@ body {
       background-color: #222; } }
 
 h1, h2, h3, h4 {
-  font-family: "Helvetica Neue", "Helvetica", sans-serif; }
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 400; }
 
 h1 {
   padding: 20px;
@@ -22,7 +23,11 @@ h1 {
 
 h2 {
   font-size: 35px;
-  color: #EEE; }
+  color: #EEE;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px; }
   @media only screen and (min-width: 600px) {
     h2 {
       color: orange; } }
@@ -32,7 +37,14 @@ h2 {
 
 .block_family {
   max-width: 350px;
-  margin: auto; }
+  margin: auto;
+  -webkit-padding-start: 0px; }
+  @media only screen and (min-width: 600px) {
+    .block_family {
+      max-width: 600px; } }
+  @media only screen and (min-width: 900px) {
+    .block_family {
+      max-width: 900px; } }
 
 .block_family li {
   background-color: #222;
@@ -41,7 +53,10 @@ h2 {
   list-style-type: none; }
   @media only screen and (min-width: 600px) {
     .block_family li {
-      background-color: #EEE; } }
+      background-color: #EEE;
+      padding: 18px 81px;
+      display: inline-block;
+      margin-bottom: 4px; } }
   @media only screen and (min-width: 900px) {
     .block_family li {
       background-color: orange; } }
